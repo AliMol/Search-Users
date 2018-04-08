@@ -54,6 +54,26 @@ describe('AppComponent', () => {
 
     expect(app.changePage(app.firstPage)).toEqual(objItem);
   }));
+
+  it('Test Fetch First Page', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    fixture.detectChanges();
+
+    var objItem= [{"user_name":"Thorsten Say","email":"tsay0@woothemes.com","gender":"Male","ip":"175.40.208.98"},
+      {"user_name":"Zacharias Edser","email":"zedser1@spotify.com","gender":"Male","ip":"134.35.71.240"},
+      {"user_name":"Lorry Swane","email":"lswane2@webmd.com","gender":"Male","ip":"70.74.21.161"},
+      {"user_name":"Adelice Copestick","email":"acopestick3@google.ru","gender":"Female","ip":"28.205.198.101"},
+      {"user_name":"Binnie Veillard","email":"bveillard4@ihg.com","gender":"Female","ip":"89.91.174.63"},
+      {"user_name":"Derk Massow","email":"dmassow5@blogtalkradio.com","gender":"Male","ip":"204.237.210.235"},
+      {"user_name":"Florette Solan","email":"fsolan6@disqus.com","gender":"Female","ip":"186.217.87.142"},
+      {"user_name":"Kelli Pudding","email":"kpudding7@nps.gov","gender":"Female","ip":"165.235.195.72"},
+      {"user_name":"Rafael O' Finan","email":"rofinan8@ucsd.edu","gender":"Male","ip":"173.27.77.108"},
+      {"user_name":"Lynnet Castanaga","email":"lcastanaga9@biblegateway.com","gender":"Female","ip":"139.213.153.87"}];
+
+    expect(app.changePage(app.firstPage)).toEqual(objItem);
+  }));
+  
   it('Test Fetch Last Page', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
@@ -115,22 +135,5 @@ describe('AppComponent', () => {
     expect(app.changePage(app.firstPage)).not.toEqual(objItem);
   }));
 
-  it('Test Fetch First Page', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    fixture.detectChanges();
 
-    var objItem= [{"user_name":"Thorsten Say","email":"tsay0@woothemes.com","gender":"Male","ip":"175.40.208.98"},
-      {"user_name":"Zacharias Edser","email":"zedser1@spotify.com","gender":"Male","ip":"134.35.71.240"},
-      {"user_name":"Lorry Swane","email":"lswane2@webmd.com","gender":"Male","ip":"70.74.21.161"},
-      {"user_name":"Adelice Copestick","email":"acopestick3@google.ru","gender":"Female","ip":"28.205.198.101"},
-      {"user_name":"Binnie Veillard","email":"bveillard4@ihg.com","gender":"Female","ip":"89.91.174.63"},
-      {"user_name":"Derk Massow","email":"dmassow5@blogtalkradio.com","gender":"Male","ip":"204.237.210.235"},
-      {"user_name":"Florette Solan","email":"fsolan6@disqus.com","gender":"Female","ip":"186.217.87.142"},
-      {"user_name":"Kelli Pudding","email":"kpudding7@nps.gov","gender":"Female","ip":"165.235.195.72"},
-      {"user_name":"Rafael O' Finan","email":"rofinan8@ucsd.edu","gender":"Male","ip":"173.27.77.108"},
-      {"user_name":"Lynnet Castanaga","email":"lcastanaga9@biblegateway.com","gender":"Female","ip":"139.213.153.87"}];
-
-    expect(app.changePage(app.firstPage)).toEqual(objItem);
-  }));
 });
