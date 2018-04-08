@@ -1,0 +1,53 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="app">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div class="search">
+  <div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+      User name: <input type="text" name="username" [(ngModel)]="username">
+      <button type="submit" value="submit" class="btn btn-primary" (click)="searchUser(username)">
+        <span class="glyphicon glyphicon-search"></span> Search
+      </button>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="table scrolling-wrapper">
+  <div class="row">
+    <div class="col-sm-12">
+      <data-table  [rows]="rows" [columns]="columns" [rowheight]="rowheight"></data-table>
+
+      <nav class="text-center">
+      <ul class="pagination" role="navigation">
+        <li role="presentation">
+          <a role="button" href="#" aria-label="first" (click)="onChangeTable(firstPage)">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+            <span class="sr-only">first</span></a></li>
+        <li role="presentation">
+          <a role="button" href="#" aria-label="Previous" (click)="onChangeTable(page - 1)">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+            <span class="sr-only">previous</span></a></li>
+        <li *ngFor="let i of list">
+          <a role="button" href="#" (click)="onChangeTable(i)"
+             aria-label="Page #{ii}">{{i}}</a>
+        </li>
+        <li role="presentation">
+          <a role="button" href="#" aria-label="Next" (click)="onChangeTable(page + 1)">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            <span class="sr-only">next</span></a></li>
+        <li role="presentation">
+          <a role="button" href="#" aria-label="Last" (click)="onChangeTable(totalPages)">
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <span class="sr-only">last</span></a></li>
+      </ul>
+    </nav>
+      <pre *ngIf="config.paging" class="card card-block card-header">
+    Page: {{page}} / {{totalPages}}</pre>
+    </div>
+  </div>
+</div>
+
+

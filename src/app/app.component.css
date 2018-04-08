@@ -1,0 +1,31 @@
+.app{
+  text-align:center;
+}
+
+.table{
+  border: 5px solid orange;
+  border-radius: 5px 5px 5px;
+  background-color: #FFF4E1;
+  box-shadow: 10px 10px 5px #888888;
+  height:auto;
+  padding: 2px;
+  margin : 2px;
+  word-wrap: break-word;
+  animation: pulse 5s alternate,
+  fadein 2s alternate,
+  shake 1s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.search{
+  text-align:center;
+  padding: 10px;
+  border: 1px solid burlywood;
+  border-radius: 5px 5px 5px;
+  background-color: #FFF4E1;
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
